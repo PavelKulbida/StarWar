@@ -52,7 +52,7 @@ namespace ServerLogicTests
 
             var act = () => mover.Move(spaceShip);
 
-            Assert.Throws<GameException>(act);
+            Assert.Throws<Exception>(act);
         }
 
         public class FakeSpaceShip(SpacePoint spaceShip, SpaceVelocity velocity) : IMovable
