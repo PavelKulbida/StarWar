@@ -7,22 +7,24 @@ namespace ServerLogicTests
         [Fact]
         public void MoveSuccessTest()
         {
+            var id = Guid.NewGuid();
             var startPoint = new SpacePoint(12, 5);
             var velocity = new SpaceVelocity(-7, 3);
             var targetPoint = new SpacePoint(5, 8);
-            var spaceShip = new SpaceShip() {Point = startPoint, Velocity = velocity};
+            var spaceShip = new SpaceShip() {Id = id, Point = startPoint, Velocity = velocity};
             var mover = new MoveAction();
 
             mover.Move(spaceShip);
 
             Assert.Equal(spaceShip.Point, targetPoint);
+            Assert.Equal(spaceShip.Id, id);
         }
 
         [Fact]
         public void MoveUnsuccessPointTest()
         {
             var velocity = new SpaceVelocity(-7, 3);
-            var spaceShip = new SpaceShip() { Velocity = velocity };
+            var spaceShip = new SpaceShip() { Id = Guid.NewGuid(), Point = null!, Velocity = velocity }; ;
             var mover = new MoveAction();
 
             var act = () => mover.Move(spaceShip);
@@ -34,7 +36,7 @@ namespace ServerLogicTests
         public void MoveUnsuccessVelocityTest()
         {
             var startPoint = new SpacePoint(12, 5);
-            var spaceShip = new SpaceShip() { Point = startPoint };
+            var spaceShip = new SpaceShip() { Id = Guid.NewGuid(), Point = startPoint, Velocity = null! }; ;
             var mover = new MoveAction();
 
             var act = () => mover.Move(spaceShip);
