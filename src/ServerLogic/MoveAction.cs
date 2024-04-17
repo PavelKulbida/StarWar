@@ -16,7 +16,7 @@
 
             if (moveItem.Point == currentPoint)
             {
-                throw new GameException("No-movable object");
+                throw new Exception("No-movable object");
             }
         }
     }
