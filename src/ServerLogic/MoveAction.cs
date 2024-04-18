@@ -14,7 +14,7 @@
             var updatedY = currentPoint.Y + moveItem.Velocity.Y;
             moveItem.Point = new SpacePoint(updatedX, updatedY);
 
-            if (moveItem.Point == currentPoint)
+            if (moveItem.Point == currentPoint && moveItem.Velocity != new SpaceVelocity(0, 0))
             {
                 throw new Exception("No-movable object");
             }

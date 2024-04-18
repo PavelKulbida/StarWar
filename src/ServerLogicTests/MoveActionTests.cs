@@ -11,7 +11,7 @@ namespace ServerLogicTests
             var startPoint = new SpacePoint(12, 5);
             var velocity = new SpaceVelocity(-7, 3);
             var targetPoint = new SpacePoint(5, 8);
-            var spaceShip = new SpaceShip() {Id = id, Point = startPoint, Velocity = velocity};
+            var spaceShip = new SpaceShip() { Id = id, Point = startPoint, Velocity = velocity };
             var mover = new MoveAction();
 
             mover.Move(spaceShip);
@@ -65,7 +65,7 @@ namespace ServerLogicTests
                 set { }
             }
 
-            public SpaceVelocity Velocity { get; set; } = velocity;
+            public SpaceVelocity Velocity { get; } = velocity;
         };
     }
 

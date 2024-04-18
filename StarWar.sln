@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerLogic", "src\ServerLogic\ServerLogic.csproj", "{18F0114E-D56B-4FDB-9760-B636B658DF16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerLogic", "src\ServerLogic\ServerLogic.csproj", "{18F0114E-D56B-4FDB-9760-B636B658DF16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerLogicTests", "src\ServerLogicTests\ServerLogicTests.csproj", "{2AAD33CC-B487-4BC3-9528-FAF2FFF7DC87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerLogicTests", "src\ServerLogicTests\ServerLogicTests.csproj", "{2AAD33CC-B487-4BC3-9528-FAF2FFF7DC87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{2A515655-799C-48C1-A577-8F4DDF59CF41}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
