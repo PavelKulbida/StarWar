@@ -2,17 +2,17 @@
 {
     public class RotateAction
     {
-        public void Rotate(IRotatable ratateItem)
+        public void Rotate(IRotatable rotateItem)
         {
-            ArgumentNullException.ThrowIfNull(ratateItem);
-            ArgumentNullException.ThrowIfNull(ratateItem.Angle);
-            ArgumentNullException.ThrowIfNull(ratateItem.AngleVelocity);
+            ArgumentNullException.ThrowIfNull(rotateItem);
+            ArgumentNullException.ThrowIfNull(rotateItem.Angle);
+            ArgumentNullException.ThrowIfNull(rotateItem.AngleVelocity);
 
-            var currentAngle = ratateItem.Angle;
+            var currentAngle = rotateItem.Angle;
 
-            ratateItem.Angle += ratateItem.AngleVelocity;
+            rotateItem.Angle = currentAngle.Value + rotateItem.AngleVelocity.Value;
 
-            if (ratateItem.Angle == currentAngle && currentAngle != 0)
+            if (rotateItem.Angle == currentAngle && currentAngle != 0)
             {
                 throw new Exception("No-rotatable object");
             }
