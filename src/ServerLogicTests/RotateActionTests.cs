@@ -56,7 +56,7 @@ namespace ServerLogicTests
                 set {}
             }
 
-            public int? AngleVelocity { get; } = angleVelocity;
+            public int? AngleVelocity { get; set; } = angleVelocity;
         };
     }
 

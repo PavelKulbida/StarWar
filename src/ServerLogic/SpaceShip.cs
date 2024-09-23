@@ -1,9 +1,7 @@
 ﻿namespace ServerLogic
 {
-    public class SpaceShip : IMovable, IRotatable
+    public class SpaceShip : UObject, IMovable, IRotatable
     {
-        public Guid Id { get; set; }
-
         public SpacePoint Point { get; set; }
 
         public SpaceVelocity Velocity { get; set; }

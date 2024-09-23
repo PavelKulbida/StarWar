@@ -65,7 +65,7 @@ namespace ServerLogicTests
                 set { }
             }
 
-            public SpaceVelocity Velocity { get; } = velocity;
+            public SpaceVelocity Velocity { get; set; } = velocity;
         };
     }
 
